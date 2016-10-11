@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{37A913C3-94AE-4809-9522-BCE3D39987BA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Phoneword_iOS/PhoneTranslator.cs">
+    <Files>
+      <File FileName="Phoneword_iOS/PhoneTranslator.cs" Line="15" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Phoneword__iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FF67CFE2-4F91-4636-80F2-9863A8EB287B" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
