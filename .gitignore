@@ -1,0 +1,7 @@
+# Untracked files
+# http://git-scm.com/docs/gitignore
+
+.DS_Store
+[Bb]in/
+[Oo]bj/
+*.userprefs
