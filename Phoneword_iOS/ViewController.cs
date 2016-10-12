@@ -52,10 +52,6 @@ namespace Phoneword_iOS
 					PresentViewController(alert, true, null);
 				}
 			};
-
-			// todo: http://stackoverflow.com/questions/2143956/gitignore-for-visual-studio-projects-and-solutions
-			// todo: https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/
-			// step 27
 		}
 
 		public override void DidReceiveMemoryWarning()
