@@ -2,11 +2,11 @@
 using System;
 
 namespace Phoneword_iOS {
-	
+
 	public static class PhoneTranslator {
-		
+
 		public static string ToNumber(string raw) {
-			
+
 			if (string.IsNullOrWhiteSpace(raw)) {
 				return "";
 			} else {
@@ -28,7 +28,7 @@ namespace Phoneword_iOS {
 			return newNumber.ToString();
 		}
 
-		static bool Contains (this string keyString, char c) {
+		static bool Contains(this string keyString, char c) {
 			return keyString.IndexOf(c) >= 0;
 		}
 

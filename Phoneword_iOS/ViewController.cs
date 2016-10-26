@@ -2,23 +2,18 @@
 using UIKit;
 using Foundation;
 
-namespace Phoneword_iOS
-{
-	public partial class ViewController : UIViewController
-	{
-		protected ViewController(IntPtr handle) : base(handle)
-		{
+namespace Phoneword_iOS {
+	public partial class ViewController : UIViewController {
+		protected ViewController(IntPtr handle) : base(handle) {
 			// Note: this .ctor should not contain any initialization logic.
 		}
 
-		public override void ViewDidLoad()
-		{
+		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
 			string translatedNumber = "";
 
-			TranslateButton.TouchUpInside += (object sender, EventArgs e) =>
-			{
+			TranslateButton.TouchUpInside += (object sender, EventArgs e) => {
 				// Convert the phone number with text to a number
 				// using PhoneTranslator.cs
 				translatedNumber = PhoneTranslator.ToNumber(
@@ -27,26 +22,22 @@ namespace Phoneword_iOS
 				// Dismiss the keyboard if text field was tapped
 				PhoneNumberText.ResignFirstResponder();
 
-				if (translatedNumber == "")
-				{
+				if (translatedNumber == "") {
 					CallButton.SetTitle("Call ", UIControlState.Normal);
 					CallButton.Enabled = false;
-				}
-				else {
+				} else {
 					CallButton.SetTitle("Call " + translatedNumber,
 						UIControlState.Normal);
 					CallButton.Enabled = true;
 				}
 			};
 
-			CallButton.TouchUpInside += (object sender, EventArgs e) =>
-			{
+			CallButton.TouchUpInside += (object sender, EventArgs e) => {
 				// Use URL handler with tel: prefix to invoke Apple's Phone app...
 				var url = new NSUrl("tel:" + translatedNumber);
 
 				// ...otherwise show an alert dialog
-				if (!UIApplication.SharedApplication.OpenUrl(url))
-				{
+				if (!UIApplication.SharedApplication.OpenUrl(url)) {
 					var alert = UIAlertController.Create("Not supported", "Scheme 'tel:' is not supported on this device", UIAlertControllerStyle.Alert);
 					alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 					PresentViewController(alert, true, null);
@@ -54,8 +45,7 @@ namespace Phoneword_iOS
 			};
 		}
 
-		public override void DidReceiveMemoryWarning()
-		{
+		public override void DidReceiveMemoryWarning() {
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.
 		}
